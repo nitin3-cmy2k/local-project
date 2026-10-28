@@ -52,7 +52,7 @@ pipeline {
                     
                     // 2. Update the frontend manifest dynamically with the new image tag and deploy
                     sh "sed -i 's|${DOCKER_REGISTRY_USER}/${FRONTEND_IMAGE}:latest|${DOCKER_REGISTRY_USER}/${FRONTEND_IMAGE}:${IMAGE_TAG}|g' k8s/frontend-deployment.yaml"
-                    sh "kubectl apply -f k8s/frontend-deployment.yaml"
+                    sh "kubectl apply -f frontend-deployment.yaml"
                 }
             }
         }
