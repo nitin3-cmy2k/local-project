@@ -6,7 +6,7 @@ pipeline {
         DOCKER_REGISTRY_USER = 'nitin3cmy2k'
         DOCKER_HUB_USER= 'nitin3cmy2k'
         DOCKER_HUB_PASSWORD = 'shivshakti@#2026' 
-        FRONTEND_IMAGE       = 'devops'
+        FRONTEND_IMAGE       = 'frontend'
         IMAGE_TAG            = "${BUILD_NUMBER}"
     }
 

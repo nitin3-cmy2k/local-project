@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: docker.io/nitin3cmy2k/devops/frontend:latest # Jenkins will push to this
+        image: docker.io/nitin3cmy2k/frontend:latest # Jenkins will push to this
         ports:
         - containerPort: 80
       imagePullSecrets:
