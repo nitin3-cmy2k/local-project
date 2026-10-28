@@ -23,7 +23,7 @@ pipeline {
                 script {
                     echo 'Building Frontend Docker Image...'
                     // Assumes a Dockerfile exists in your frontend directory
-                    sh "docker build -t ${DOCKER_REGISTRY_USER}/${FRONTEND_IMAGE}:${IMAGE_TAG} ... ./frontend"
+                    sh "docker build -t ${DOCKER_REGISTRY_USER}/${FRONTEND_IMAGE}:${IMAGE_TAG} ."
                     sh "docker tag ${DOCKER_REGISTRY_USER}/${FRONTEND_IMAGE}:${IMAGE_TAG} ${DOCKER_REGISTRY_USER}/${FRONTEND_IMAGE}:latest"
                 }
             }
