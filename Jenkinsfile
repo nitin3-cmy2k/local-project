@@ -48,10 +48,10 @@ pipeline {
                     echo 'Deploying to VirtualBox Kubernetes Cluster...'
                     
                     // 1. Deploy the MySQL Database
-                    sh "kubectl apply -f k8s/mysql-deployment.yaml"
+                    sh "kubectl apply -f mysql-deployment.yaml"
                     
                     // 2. Update the frontend manifest dynamically with the new image tag and deploy
-                    sh "sed -i 's|${DOCKER_REGISTRY_USER}/${FRONTEND_IMAGE}:latest|${DOCKER_REGISTRY_USER}/${FRONTEND_IMAGE}:${IMAGE_TAG}|g' k8s/frontend-deployment.yaml"
+                    sh "sed -i 's|${DOCKER_REGISTRY_USER}/${FRONTEND_IMAGE}:latest|${DOCKER_REGISTRY_USER}/${FRONTEND_IMAGE}:${IMAGE_TAG}|g' frontend-deployment.yaml"
                     sh "kubectl apply -f frontend-deployment.yaml"
                 }
             }
