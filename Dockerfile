@@ -3,7 +3,7 @@ FROM node:18-alpine AS builder
 WORKDIR /app
 
 # Copy dependency files first to leverage Docker layer caching
-RUN apt install npm -y
+#RUN apt install npm -y
 RUN npm init -y
 RUN npm install express react react-dom
 COPY package*.json ./
