@@ -15,10 +15,10 @@ spec:
       containers:
       - name: frontend
         image: docker.io/nitin3cmy2k/frontend/frontend:latest # Jenkins will push to this
-      imagePullSecrets:
-        - name: dockerhub-cred
         ports:
         - containerPort: 80
+      imagePullSecrets:
+      - name: dockerhub-cred
 ---
 apiVersion: v1
 kind: Service

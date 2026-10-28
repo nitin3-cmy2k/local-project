@@ -14,8 +14,6 @@ spec:
       containers:
       - name: mysql
         image: docker.io/mysql:8.0
-      imagePullSecrets:
-         - name: dockerhub-cred  
         env:
         - name: MYSQL_ROOT_PASSWORD
           value: "rootpassword" # In production, use Kubernetes Secrets
@@ -23,6 +21,8 @@ spec:
           value: "mydb"
         ports:
         - containerPort: 3306
+      imagePullSecrets:
+      - name: dockerhub-cred
 ---
 apiVersion: v1
 kind: Service
