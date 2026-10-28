@@ -3,8 +3,8 @@ pipeline {
 
     environment {
         // Replace with your Docker Hub username
-        DOCKER_REGISTRY_USER = 'salunkhenitin3@gmail.com'
-        DOCKER_HUB_USER= 'salunkhenitin3@gmail.com'
+        DOCKER_REGISTRY_USER = 'nitin3cmy2k'
+        DOCKER_HUB_USER= 'nitin3cmy2k'
         DOCKER_HUB_PASSWORD = 'shivshakti@#2026' 
         FRONTEND_IMAGE       = 'frontend'
         IMAGE_TAG            = "${BUILD_NUMBER}"
