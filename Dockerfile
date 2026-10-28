@@ -7,7 +7,7 @@ WORKDIR /app
 RUN npm init -y
 RUN npm install express react react-dom
 COPY package*.json ./
-RUN npm install
+#RUN npm install
 
 # Copy the rest of the frontend source code
 COPY . .
