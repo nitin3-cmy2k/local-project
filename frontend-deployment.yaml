@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: your-dockerhub-username/frontend:latest # Jenkins will push to this
+        image: nitin3cmy2k/frontend:latest # Jenkins will push to this
         ports:
         - containerPort: 80
 ---
